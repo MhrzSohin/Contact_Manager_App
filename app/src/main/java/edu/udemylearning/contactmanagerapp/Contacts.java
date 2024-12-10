@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "contacts_table")
 public class Contacts {
     @ColumnInfo(name = "contact_id")
-            @PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = true)
     int id;
     @ColumnInfo(name = "contacts_name")
     String name;
