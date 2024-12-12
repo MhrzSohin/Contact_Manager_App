@@ -15,6 +15,10 @@ import edu.udemylearning.contactmanagerapp.databinding.ContactListItemBinding;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ContactViewHolder> {
     private ArrayList<Contacts> contactsArrayList;
 
+    public MyAdapter(ArrayList<Contacts> contactsArrayList) {
+        this.contactsArrayList = contactsArrayList;
+    }
+
     @NonNull
     @Override
     public ContactViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
