@@ -14,9 +14,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#51E1DB"
     android:padding="16dp">
 
+    <TextView
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact List"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="45dp"
         android:id="@+id/recyclerview"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -28,6 +42,8 @@
         android:id="@+id/myNotesAddingBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="@color/white"
         android:layout_marginBottom="16dp"
         android:onClick="@{clickHandler::FabOnClick}"
         android:layout_marginRight="16dp"

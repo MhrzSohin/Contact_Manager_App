@@ -12,7 +12,7 @@ public class MainActivityClickHandler {
     }
 
     public void FabOnClick(View view){
-        Intent intent = new Intent(view.getContext(), AddNewContactClickHandler.class);
+        Intent intent = new Intent(view.getContext(), AddNewContact.class);
         context.startActivity(intent);
     }
 }

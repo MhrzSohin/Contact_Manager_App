@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="contact"
+            type="edu.udemylearning.contactmanagerapp.Contacts" />
+        <variable
+            name="clickHandler"
+            type="edu.udemylearning.contactmanagerapp.AddNewContactClickHandler" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="#51E1DB"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Add Contact To \n Dashboard"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/ovalback"
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:paddingStart="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="182dp"
+        android:inputType="text"
+        android:text="@={contact.name}"
+        android:hint="Enter your name"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/ovalback"
+        android:textColor="@color/black"
+        android:id="@+id/editTextText2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Enter your E-mail"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="52dp"
+        android:paddingStart="20dp"
+        android:inputType="text"
+        android:text="@={contact.email}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:onClick="@{clickHandler::AddBtn}"
+        android:textColor="@color/black"
+        android:text="Add New Contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintVertical_bias="0.025" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
